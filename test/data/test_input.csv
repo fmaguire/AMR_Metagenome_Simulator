@@ -1,0 +1,3 @@
+fasta_path,copy_number
+test/data/e_coli_mg1655.fna,3
+test/data/k_pneumo_HS11286.fna,1
