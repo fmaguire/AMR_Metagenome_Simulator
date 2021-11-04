@@ -37,4 +37,4 @@ if __name__ == "__main__":
 
 
     with open(args.output, 'w') as fh:
-        SeqIO.write(genome_contigs, fh, 'fasta')
+        SeqIO.write(genome_contigs, fh, 'fasta-2line')

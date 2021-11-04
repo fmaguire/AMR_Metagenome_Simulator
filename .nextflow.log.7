@@ -1,33 +1,33 @@
-Sep-26 23:58:35.571 [main] DEBUG nextflow.cli.Launcher - $> nextflow run simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna -resume
-Sep-26 23:58:35.808 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
-Sep-26 23:58:35.848 [main] INFO  nextflow.cli.CmdRun - Launching `simulate.nf` [voluminous_raman] - revision: e4eccbef7e
-Sep-26 23:58:35.987 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/fin/.nextflow/plugins
-Sep-26 23:58:35.989 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Sep-26 23:58:35.993 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
-Sep-26 23:58:36.005 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Sep-26 23:58:36.007 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Sep-26 23:58:36.014 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Sep-26 23:58:36.029 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Sep-26 23:58:36.112 [main] DEBUG nextflow.Session - Session uuid: 33c28923-8a13-4763-bdd4-570d85e11354
-Sep-26 23:58:36.112 [main] DEBUG nextflow.Session - Run name: voluminous_raman
-Sep-26 23:58:36.115 [main] DEBUG nextflow.Session - Executor pool size: 4
-Sep-26 23:58:36.139 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-03 23:45:53.134 [main] DEBUG nextflow.cli.Launcher - $> nextflow run amr_simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna -resume
+Nov-03 23:45:53.453 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+Nov-03 23:45:53.502 [main] INFO  nextflow.cli.CmdRun - Launching `amr_simulate.nf` [modest_church] - revision: bd0eafd33a
+Nov-03 23:45:53.659 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/fin/.nextflow/plugins
+Nov-03 23:45:53.661 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-03 23:45:53.665 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Nov-03 23:45:53.679 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-03 23:45:53.681 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-03 23:45:53.687 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-03 23:45:53.702 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-03 23:45:53.792 [main] DEBUG nextflow.Session - Session uuid: 6b12e557-192a-4b75-864a-7c11c3b44261
+Nov-03 23:45:53.792 [main] DEBUG nextflow.Session - Run name: modest_church
+Nov-03 23:45:53.795 [main] DEBUG nextflow.Session - Executor pool size: 4
+Nov-03 23:45:53.821 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 21.04.3 build 5560
   Created: 21-07-2021 15:09 UTC (11:09 EDT)
-  System: Linux 5.13.12-arch1-1
+  System: Linux 5.14.12-arch1-1
   Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_292-b10
   Encoding: UTF-8 (UTF-8)
-  Process: 44018@dahzbog [127.0.1.1]
-  CPUs: 4 - Mem: 15.5 GB (5 GB) - Swap: 4 GB (4 GB)
-Sep-26 23:58:36.208 [main] DEBUG nextflow.Session - Work-dir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work [ext2/ext3]
-Sep-26 23:58:36.236 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Sep-26 23:58:36.254 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Sep-26 23:58:36.573 [main] DEBUG nextflow.Session - Session start invoked
-Sep-26 23:58:37.964 [main] ERROR nextflow.cli.Launcher - Script compilation error
-- file : /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/simulate.nf
-- cause: Invalid process definition -- Make sure the process ends with a script wrapped by quote characters @ line 72, column 1.
+  Process: 54615@dahzbog [127.0.1.1]
+  CPUs: 4 - Mem: 15.5 GB (638.1 MB) - Swap: 4 GB (4 GB)
+Nov-03 23:45:53.899 [main] DEBUG nextflow.Session - Work-dir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work [ext2/ext3]
+Nov-03 23:45:53.933 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-03 23:45:53.955 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-03 23:45:54.352 [main] DEBUG nextflow.Session - Session start invoked
+Nov-03 23:45:55.283 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/amr_simulate.nf
+- cause: Unexpected input: '{' @ line 85, column 20.
    process GET_LABELS {
-   ^
+                      ^
 
 1 error
 

@@ -1,134 +1,73 @@
-Sep-27 00:08:51.547 [main] DEBUG nextflow.cli.Launcher - $> nextflow run simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna -resume
-Sep-27 00:08:51.808 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
-Sep-27 00:08:51.848 [main] INFO  nextflow.cli.CmdRun - Launching `simulate.nf` [fabulous_mendel] - revision: 85e973c7e9
-Sep-27 00:08:52.000 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/fin/.nextflow/plugins
-Sep-27 00:08:52.002 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Sep-27 00:08:52.005 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
-Sep-27 00:08:52.020 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Sep-27 00:08:52.021 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Sep-27 00:08:52.027 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Sep-27 00:08:52.043 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Sep-27 00:08:52.125 [main] DEBUG nextflow.Session - Session uuid: 33c28923-8a13-4763-bdd4-570d85e11354
-Sep-27 00:08:52.125 [main] DEBUG nextflow.Session - Run name: fabulous_mendel
-Sep-27 00:08:52.128 [main] DEBUG nextflow.Session - Executor pool size: 4
-Sep-27 00:08:52.153 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-03 23:49:00.603 [main] DEBUG nextflow.cli.Launcher - $> nextflow run amr_simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna -resume
+Nov-03 23:49:00.890 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+Nov-03 23:49:00.931 [main] INFO  nextflow.cli.CmdRun - Launching `amr_simulate.nf` [desperate_bhabha] - revision: c9f03425de
+Nov-03 23:49:01.084 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/fin/.nextflow/plugins
+Nov-03 23:49:01.086 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-03 23:49:01.089 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Nov-03 23:49:01.103 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-03 23:49:01.104 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-03 23:49:01.110 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-03 23:49:01.126 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-03 23:49:01.212 [main] DEBUG nextflow.Session - Session uuid: 6b12e557-192a-4b75-864a-7c11c3b44261
+Nov-03 23:49:01.212 [main] DEBUG nextflow.Session - Run name: desperate_bhabha
+Nov-03 23:49:01.215 [main] DEBUG nextflow.Session - Executor pool size: 4
+Nov-03 23:49:01.241 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 21.04.3 build 5560
   Created: 21-07-2021 15:09 UTC (11:09 EDT)
-  System: Linux 5.13.12-arch1-1
+  System: Linux 5.14.12-arch1-1
   Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_292-b10
   Encoding: UTF-8 (UTF-8)
-  Process: 45210@dahzbog [127.0.1.1]
-  CPUs: 4 - Mem: 15.5 GB (4.8 GB) - Swap: 4 GB (4 GB)
-Sep-27 00:08:52.219 [main] DEBUG nextflow.Session - Work-dir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work [ext2/ext3]
-Sep-27 00:08:52.248 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Sep-27 00:08:52.267 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Sep-27 00:08:52.572 [main] DEBUG nextflow.Session - Session start invoked
-Sep-27 00:08:54.090 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Sep-27 00:08:54.169 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SIMULATE_READS, INSERT_GENES, SPLIT_INSERT_GENES, COPY_NUMBER, ANNOTATE_AMR, GET_LABELS
-Sep-27 00:08:54.406 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Sep-27 00:08:54.407 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Sep-27 00:08:54.415 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Sep-27 00:08:54.423 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=15.5 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
-Sep-27 00:08:54.617 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Sep-27 00:08:54.618 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Sep-27 00:08:54.635 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Sep-27 00:08:54.636 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Sep-27 00:08:54.649 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Sep-27 00:08:54.650 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Sep-27 00:08:54.686 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
-Sep-27 00:08:54.686 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Sep-27 00:08:54.714 [main] DEBUG nextflow.Session - Session aborted -- Cause: Unknown process directive: `_in_path`
-Sep-27 00:08:54.745 [main] DEBUG nextflow.Session - The following nodes are still active:
-  [operator] splitCsv
-  [operator] map
-  [operator] count
-  [operator] flatten
-  [operator] map
-  [operator] join
-  [operator] collectFile
-  [operator] collectFile
-
-Sep-27 00:08:54.751 [main] ERROR nextflow.cli.Launcher - @unknown
-nextflow.exception.IllegalDirectiveException: Unknown process directive: `_in_path`
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:105)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
-	at nextflow.script.ProcessConfig.checkName(ProcessConfig.groovy:217)
-	at nextflow.script.ProcessConfig.methodMissing(ProcessConfig.groovy:236)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaClassImpl.invokeMissingMethod(MetaClassImpl.java:953)
-	at groovy.lang.MetaClassImpl.invokePropertyOrMissing(MetaClassImpl.java:1347)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1270)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
-	at groovy.lang.MetaObjectProtocol$invokeMethod.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
-	at nextflow.script.ProcessConfig.invokeMethod(ProcessConfig.groovy:232)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:339)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at Script_a1052c18$_runScript_closure6.doCall(Script_a1052c18:77)
-	at Script_a1052c18$_runScript_closure6.doCall(Script_a1052c18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
-	at groovy.lang.Closure.call(Closure.java:412)
-	at groovy.lang.Closure.call(Closure.java:406)
-	at nextflow.script.ProcessDef.initialize(ProcessDef.groovy:111)
-	at nextflow.script.ProcessDef.run(ProcessDef.groovy:165)
-	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
-	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:41)
-	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:95)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:397)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:339)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:194)
-	at Script_a1052c18$_runScript_closure7$_closure14.doCall(Script_a1052c18:122)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
-	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
-	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
-	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
-	at groovy.lang.Closure.call(Closure.java:412)
-	at groovy.lang.Closure.call(Closure.java:406)
-	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:186)
-	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:170)
-	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:52)
-	at nextflow.script.ChainableDef$invoke_a.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
-	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:191)
-	at nextflow.script.BaseScript.run(BaseScript.groovy:200)
-	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:221)
-	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
-	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:302)
-	at nextflow.cli.Launcher.run(Launcher.groovy:475)
-	at nextflow.cli.Launcher.main(Launcher.groovy:657)
-Sep-27 00:08:54.763 [Actor Thread 1] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
-Sep-27 00:08:54.764 [Actor Thread 3] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+  Process: 55789@dahzbog [127.0.1.1]
+  CPUs: 4 - Mem: 15.5 GB (712.2 MB) - Swap: 4 GB (4 GB)
+Nov-03 23:49:01.314 [main] DEBUG nextflow.Session - Work-dir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work [ext2/ext3]
+Nov-03 23:49:01.345 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-03 23:49:01.364 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-03 23:49:01.799 [main] DEBUG nextflow.Session - Session start invoked
+Nov-03 23:49:03.654 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-03 23:49:03.741 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SIMULATE_READS, INSERT_GENES, SPLIT_INSERT_GENES, COPY_NUMBER, ANNOTATE_AMR, GET_LABELS
+Nov-03 23:49:04.102 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 23:49:04.103 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 23:49:04.112 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-03 23:49:04.122 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=15.5 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Nov-03 23:49:04.396 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 23:49:04.396 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 23:49:04.417 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 23:49:04.418 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 23:49:04.439 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 23:49:04.439 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 23:49:04.532 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 23:49:04.532 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 23:49:04.560 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 23:49:04.560 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 23:49:04.572 [main] DEBUG nextflow.Session - Ignite dataflow network (8)
+Nov-03 23:49:04.597 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SPLIT_INSERT_GENES
+Nov-03 23:49:04.598 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > INSERT_GENES
+Nov-03 23:49:04.604 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ANNOTATE_AMR
+Nov-03 23:49:04.608 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > COPY_NUMBER
+Nov-03 23:49:04.612 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SIMULATE_READS
+Nov-03 23:49:04.612 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GET_LABELS
+Nov-03 23:49:04.613 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-03 23:49:04.614 [main] DEBUG nextflow.Session - Session await
+Nov-03 23:49:04.933 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [11/ba3218] Cached process > SPLIT_INSERT_GENES (1)
+Nov-03 23:49:05.321 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [b9/643170] Cached process > INSERT_GENES (1)
+Nov-03 23:49:05.323 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [79/9f2fc0] Cached process > INSERT_GENES (2)
+Nov-03 23:49:05.364 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [e8/bbaff8] Cached process > ANNOTATE_AMR (2)
+Nov-03 23:49:05.366 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [f5/ef60b1] Cached process > ANNOTATE_AMR (1)
+Nov-03 23:49:05.380 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [d7/bbe936] Cached process > COPY_NUMBER (1)
+Nov-03 23:49:05.385 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [ee/1b23ac] Cached process > COPY_NUMBER (2)
+Nov-03 23:49:05.417 [Actor Thread 4] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 2; slices: 1; internal sort time: 0.005 s; external sort time: 0.002 s; total time: 0.007 s
+Nov-03 23:49:05.418 [Actor Thread 4] DEBUG nextflow.file.FileCollector - >> temp file exists? true
+Nov-03 23:49:05.419 [Actor Thread 4] DEBUG nextflow.file.FileCollector - Retrivied cached collect-files from: /tmp/e24eb0fd766570f5e4814dee464dc3e4.collect-file -- cached files: [/home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/tmp/43/dac8d8e9452431e50f828d032cf6e3/simulated_metagenome.fna]
+Nov-03 23:49:05.417 [Actor Thread 3] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 2; slices: 1; internal sort time: 0.006 s; external sort time: 0.001 s; total time: 0.007 s
+Nov-03 23:49:05.420 [Actor Thread 3] DEBUG nextflow.file.FileCollector - >> temp file exists? true
+Nov-03 23:49:05.421 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Retrivied cached collect-files from: /tmp/bb11614215849bf2e142903342c23a9b.collect-file -- cached files: [/home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/tmp/d2/20b55befc5ef5d81d0b9010e8855f3/metagenome_unsorted.bed]
+Nov-03 23:49:05.434 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [60/2be6f5] Cached process > SIMULATE_READS (1)
+Nov-03 23:49:05.442 [Actor Thread 4] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-4092482126535289878
+Nov-03 23:49:05.442 [Actor Thread 3] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-317368227284650954
+Nov-03 23:49:05.443 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [9a/9c7346] Cached process > GET_LABELS (1)
+Nov-03 23:49:05.455 [Actor Thread 5] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=12; maxQueueSize=36; keepAlive=1m
+Nov-03 23:49:05.485 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-03 23:49:05.507 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-03 23:49:05.527 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=9; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=1m 30s;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Nov-03 23:49:05.731 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-03 23:49:05.803 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

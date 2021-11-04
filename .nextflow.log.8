@@ -1,33 +1,93 @@
-Sep-26 23:58:18.825 [main] DEBUG nextflow.cli.Launcher - $> nextflow run simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna -resume
-Sep-26 23:58:19.056 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
-Sep-26 23:58:19.100 [main] INFO  nextflow.cli.CmdRun - Launching `simulate.nf` [curious_mayer] - revision: c47a88276f
-Sep-26 23:58:19.243 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/fin/.nextflow/plugins
-Sep-26 23:58:19.245 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Sep-26 23:58:19.248 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
-Sep-26 23:58:19.261 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Sep-26 23:58:19.262 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Sep-26 23:58:19.268 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Sep-26 23:58:19.282 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Sep-26 23:58:19.363 [main] DEBUG nextflow.Session - Session uuid: 33c28923-8a13-4763-bdd4-570d85e11354
-Sep-26 23:58:19.363 [main] DEBUG nextflow.Session - Run name: curious_mayer
-Sep-26 23:58:19.366 [main] DEBUG nextflow.Session - Executor pool size: 4
-Sep-26 23:58:19.389 [main] DEBUG nextflow.cli.CmdRun - 
+Nov-03 22:29:28.522 [main] DEBUG nextflow.cli.Launcher - $> nextflow run amr_simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna -resume
+Nov-03 22:29:28.916 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.04.3
+Nov-03 22:29:28.960 [main] INFO  nextflow.cli.CmdRun - Launching `amr_simulate.nf` [fervent_ampere] - revision: bf98c2f96e
+Nov-03 22:29:29.120 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/fin/.nextflow/plugins
+Nov-03 22:29:29.123 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Nov-03 22:29:29.127 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins local root: .nextflow/plr/empty
+Nov-03 22:29:29.140 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Nov-03 22:29:29.142 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Nov-03 22:29:29.148 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Nov-03 22:29:29.164 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Nov-03 22:29:29.255 [main] DEBUG nextflow.Session - Session uuid: 6b12e557-192a-4b75-864a-7c11c3b44261
+Nov-03 22:29:29.255 [main] DEBUG nextflow.Session - Run name: fervent_ampere
+Nov-03 22:29:29.258 [main] DEBUG nextflow.Session - Executor pool size: 4
+Nov-03 22:29:29.284 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 21.04.3 build 5560
   Created: 21-07-2021 15:09 UTC (11:09 EDT)
-  System: Linux 5.13.12-arch1-1
+  System: Linux 5.14.12-arch1-1
   Runtime: Groovy 3.0.7 on OpenJDK 64-Bit Server VM 1.8.0_292-b10
   Encoding: UTF-8 (UTF-8)
-  Process: 43918@dahzbog [127.0.1.1]
-  CPUs: 4 - Mem: 15.5 GB (5 GB) - Swap: 4 GB (4 GB)
-Sep-26 23:58:19.458 [main] DEBUG nextflow.Session - Work-dir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work [ext2/ext3]
-Sep-26 23:58:19.487 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Sep-26 23:58:19.506 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Sep-26 23:58:19.847 [main] DEBUG nextflow.Session - Session start invoked
-Sep-26 23:58:21.282 [main] ERROR nextflow.cli.Launcher - Script compilation error
-- file : /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/simulate.nf
-- cause: Invalid process definition -- Make sure the process ends with a script wrapped by quote characters @ line 72, column 1.
-   process GET_LABELS {
-   ^
-
-1 error
-
+  Process: 44552@dahzbog [127.0.1.1]
+  CPUs: 4 - Mem: 15.5 GB (465.7 MB) - Swap: 4 GB (4 GB)
+Nov-03 22:29:29.358 [main] DEBUG nextflow.Session - Work-dir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work [ext2/ext3]
+Nov-03 22:29:29.395 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Nov-03 22:29:29.416 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Nov-03 22:29:29.817 [main] DEBUG nextflow.Session - Session start invoked
+Nov-03 22:29:32.408 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Nov-03 22:29:32.533 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: SIMULATE_READS, INSERT_GENES, SPLIT_INSERT_GENES, COPY_NUMBER, ANNOTATE_AMR, GET_LABELS
+Nov-03 22:29:32.805 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 22:29:32.805 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 22:29:32.814 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Nov-03 22:29:32.823 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=15.5 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Nov-03 22:29:33.036 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 22:29:33.036 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 22:29:33.064 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 22:29:33.065 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 22:29:33.078 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 22:29:33.078 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 22:29:33.143 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 22:29:33.143 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 22:29:33.151 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Nov-03 22:29:33.152 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Nov-03 22:29:33.160 [main] DEBUG nextflow.Session - Ignite dataflow network (8)
+Nov-03 22:29:33.173 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SPLIT_INSERT_GENES
+Nov-03 22:29:33.176 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > INSERT_GENES
+Nov-03 22:29:33.179 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ANNOTATE_AMR
+Nov-03 22:29:33.181 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > COPY_NUMBER
+Nov-03 22:29:33.181 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > SIMULATE_READS
+Nov-03 22:29:33.188 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > GET_LABELS
+Nov-03 22:29:33.191 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Nov-03 22:29:33.191 [main] DEBUG nextflow.Session - Session await
+Nov-03 22:29:33.430 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:29:33.436 [Task submitter] INFO  nextflow.Session - [11/ba3218] Submitted process > SPLIT_INSERT_GENES (1)
+Nov-03 22:29:33.918 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: SPLIT_INSERT_GENES (1); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/11/ba3218b871142422f15352070a81f7]
+Nov-03 22:29:33.969 [Task monitor] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=12; maxQueueSize=36; keepAlive=1m
+Nov-03 22:29:33.993 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:29:34.001 [Task submitter] INFO  nextflow.Session - [b9/643170] Submitted process > INSERT_GENES (1)
+Nov-03 22:29:34.025 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:29:34.061 [Task submitter] INFO  nextflow.Session - [79/9f2fc0] Submitted process > INSERT_GENES (2)
+Nov-03 22:29:34.483 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: INSERT_GENES (1); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/b9/643170d2f6287698c856efe5a2eb5e]
+Nov-03 22:29:34.553 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:29:34.566 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: INSERT_GENES (2); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/79/9f2fc0bdd23f2e5bdc09b9111f1afd]
+Nov-03 22:29:34.573 [Task submitter] INFO  nextflow.Session - [f5/ef60b1] Submitted process > ANNOTATE_AMR (1)
+Nov-03 22:29:34.614 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:29:34.615 [Task submitter] INFO  nextflow.Session - [e8/bbaff8] Submitted process > ANNOTATE_AMR (2)
+Nov-03 22:30:04.155 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: ANNOTATE_AMR (1); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/f5/ef60b1d0564b24f4d77be19e22804a]
+Nov-03 22:30:04.180 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:30:04.181 [Task submitter] INFO  nextflow.Session - [ee/1b23ac] Submitted process > COPY_NUMBER (1)
+Nov-03 22:30:04.787 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: COPY_NUMBER (1); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/ee/1b23acaacd3ffaccdb58b99434bf3d]
+Nov-03 22:30:26.551 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: ANNOTATE_AMR (2); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/e8/bbaff8be66373185a5d6443c7f9b6e]
+Nov-03 22:30:26.566 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:30:26.567 [Task submitter] INFO  nextflow.Session - [d7/bbe936] Submitted process > COPY_NUMBER (2)
+Nov-03 22:30:26.765 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: COPY_NUMBER (2); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/d7/bbe93643829be47246562946844f8f]
+Nov-03 22:30:26.808 [Actor Thread 10] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 2; slices: 1; internal sort time: 0.021 s; external sort time: 0.001 s; total time: 0.022 s
+Nov-03 22:30:26.808 [Actor Thread 10] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Nov-03 22:30:26.809 [Actor Thread 10] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /tmp/bb11614215849bf2e142903342c23a9b.collect-file
+Nov-03 22:30:26.809 [Actor Thread 11] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 2; slices: 1; internal sort time: 0.021 s; external sort time: 0.001 s; total time: 0.022 s
+Nov-03 22:30:26.809 [Actor Thread 11] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Nov-03 22:30:26.809 [Actor Thread 11] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /tmp/e24eb0fd766570f5e4814dee464dc3e4.collect-file
+Nov-03 22:30:26.826 [Actor Thread 10] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /tmp/bb11614215849bf2e142903342c23a9b.collect-file
+Nov-03 22:30:26.833 [Actor Thread 11] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /tmp/e24eb0fd766570f5e4814dee464dc3e4.collect-file
+Nov-03 22:30:26.864 [Actor Thread 11] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-5802479885159834599
+Nov-03 22:30:26.868 [Actor Thread 10] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-9119754635925336470
+Nov-03 22:30:26.873 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:30:26.873 [Task submitter] INFO  nextflow.Session - [60/2be6f5] Submitted process > SIMULATE_READS (1)
+Nov-03 22:30:32.744 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: SIMULATE_READS (1); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/60/2be6f591d23b8a45ba79e09445f5a7]
+Nov-03 22:30:32.763 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Nov-03 22:30:32.764 [Task submitter] INFO  nextflow.Session - [31/83eea2] Submitted process > GET_LABELS (1)
+Nov-03 22:30:32.820 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: GET_LABELS (1); status: COMPLETED; exit: 0; error: -; workDir: /home/fin/Documents/research/bioinformatics/amr_metagenome_simulator/work/31/83eea200fd3c4d72e921a2aad0de2b]
+Nov-03 22:30:32.825 [main] DEBUG nextflow.Session - Session await > all process finished
+Nov-03 22:30:32.828 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Nov-03 22:30:32.839 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=9; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1m 29s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+Nov-03 22:30:33.008 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Nov-03 22:30:33.044 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -24,15 +24,27 @@ if __name__ == "__main__":
     with open(args.input_rgi_tsv) as rgi_csv:
         reader = csv.DictReader(rgi_csv, delimiter='\t')
         for row in reader:
-            contig_name = "_".join(row['Contig'].split('_')[:-1])
+            if row['Model_type'] == 'rRNA gene variant model':
+                contig_name = row['Contig']
+            else:
+                contig_name = "_".join(row['Contig'].split('_')[:-1])
+
+            # append snp information to ARO as name is only field that
+            # can include this in bed format
+            if row['Model_type'] in ['rRNA gene variant model',
+                                     'protein variant model']:
+                name = f"{row['ARO']}:{row['SNPs_in_Best_Hit_ARO'].replace(' ', '')}"
+            else:
+                name = row['ARO']
 
             if row['Cut_Off'] == 'Perfect':
                 score = 1000
             elif row['Cut_Off'] == 'Strict':
                 score = 500
+
             bed_writer.writerow({'chrom': contig_name,
                                  'chromStart': row['Start'],
                                  'chromEnd': row['Stop'],
-                                 'name': row['ARO'],
+                                 'name': name,
                                  'score': score,
                                  'strand': row['Orientation']})

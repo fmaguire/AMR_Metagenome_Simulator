@@ -14,6 +14,9 @@ if __name__ == "__main__":
                         help="BED file of annotations for genome")
     parser.add_argument("-c", "--copy_number", required=True, type=int,
                         help="Number of copies to make for genome")
+    parser.add_argument("-o", "--output_prefix", required=True, type=str,
+                        help="Prefix string for output")
+
 
     args = parser.parse_args()
 
@@ -25,8 +28,8 @@ if __name__ == "__main__":
         reader = csv.reader(fh, delimiter='\t')
         annotations = [record for record in reader]
 
-    output_genome = open('genome_copied.fna', 'w')
-    output_bed_fh = open('rgi_labels_copied.bed', 'w')
+    output_genome = open(f"{args.output_prefix}_amplified.fna", 'w')
+    output_bed_fh = open(f"{args.output_prefix}_amr_amplified.bed", 'w', newline='')
     output_bed = csv.writer(output_bed_fh, delimiter='\t')
 
     for copy_ix in range(args.copy_number):
@@ -36,7 +39,7 @@ if __name__ == "__main__":
             SeqIO.write(new_record, output_genome, 'fasta')
         for annotation in annotations:
             new_annotation = copy.deepcopy(annotation)
-            new_annotation[0] = new_annotation[0] + f"_{copy_ix}"
+            new_annotation[0] = annotation[0] + f"_{copy_ix}"
             output_bed.writerow(new_annotation)
 
     output_genome.close()
