@@ -23,8 +23,14 @@ There are better ways to do this but its so simple that a single env works
 
 ## Example Execution
 
-    ./nextflow run amr_simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna  -resume
 
+The main input file is a CSV `--input_data` containing 3 fields `genome_name` (identifier for a given genome),`fasta_path` (path to a fasta file containing that genome) and `copy_number` (relative abundance of that genome in simulated metagenome must be an integer e.g., 3 means 3x as many reads from this genome than any genome at 1x although not adjusted for genome size!). 
+
+The other input is a fasta file `--insertion_genes` containing AMR genes (or any other sequence) to randomly insert into the input genomes.
+
+See `test/data` for examples. To run the workflow using these test files:
+
+    ./nextflow run amr_simulate.nf --input_data test/data/test_input.csv --insertion_genes test/data/insert_seqs.fna  -resume
 
 This will generate an output folder called `simulated_metagenome`
 
