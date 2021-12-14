@@ -67,7 +67,7 @@ process SIMULATE_READS {
         path(metagenome_fasta), emit: metagenome_fasta
     script:
         """
-        art_illumina --in $metagenome_fasta --paired --len 250 --fcov 2 --mflen 600 --sdev 50 --seqSys MSv3 --errfree --noALN --out metagenome 
+        art_illumina --in $metagenome_fasta --paired --len 250 --rcount 2500000 --mflen 600 --sdev 50 --seqSys MSv3 --errfree --noALN --out metagenome 
         
         gzip -cvf metagenome1.fq > simulated_metagenome_1.fq.gz
         rm metagenome1.fq
