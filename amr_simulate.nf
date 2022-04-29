@@ -19,11 +19,11 @@ process SPLIT_INSERT_GENES {
 }
 
 process INSERT_GENES {
-    //publishDir 'results/1.insert', mode: 'copy' 
+    publishDir 'simulated_metagenome', mode: 'copy' 
     input:
         tuple val(index), val(genome_name), path(genome), val(copy_number), path(insert_fasta)
     output:
-        tuple val(genome_name), path("*_with_insertions.fna"), val(copy_number)
+        tuple val(genome_name), path("*_with_insertions.fna"), val(copy_number), path("*_with_insertions.fna.insertsOnly.fna")
     script:
         """
         insert_genes.py --input_genome $genome --insert_genes $insert_fasta --output ${genome_name}_with_insertions.fna
@@ -33,7 +33,7 @@ process INSERT_GENES {
 process ANNOTATE_AMR {
     //publishDir 'results/2.annotate', mode: 'copy' , pattern: "*.bed"
     input:
-        tuple val(genome_name), path(genome), val(copy_number) 
+        tuple val(genome_name), path(genome), val(copy_number), path(inserts)
     output:
         tuple val(genome_name), path(genome), val(copy_number), path("*_rgi_labels.bed")
     script:
@@ -67,8 +67,7 @@ process SIMULATE_READS {
         path(metagenome_fasta), emit: metagenome_fasta
     script:
         """
-        art_illumina --in $metagenome_fasta --paired --len 250 --rcount 2500000 --mflen 600 --sdev 50 --seqSys MSv3 --errfree --noALN --out metagenome 
-        
+		art_illumina --in $metagenome_fasta --paired --len 250 --fcov 2 --mflen 600 --sdev 50 --seqSys MSv3 --errfree --noALN --out metagenome 
         gzip -cvf metagenome1.fq > simulated_metagenome_1.fq.gz
         rm metagenome1.fq
         gzip -cvf metagenome2.fq > simulated_metagenome_2.fq.gz
