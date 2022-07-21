@@ -1,5 +1,8 @@
 # AMR Metagenome Simulator
 
+
+[![DOI](https://zenodo.org/badge/424465403.svg)](https://zenodo.org/badge/latestdoi/424465403)
+
 Simple AMR metagenome simulator implemented in nextflow. 
 
 This takes a spreadsheet of input fasta files (corresponding to genomes/plasmids etc) and specified relative copy number, as well as a fasta file containing genes to randomly insert into those genomes.
