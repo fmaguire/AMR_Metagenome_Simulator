@@ -21,13 +21,14 @@ if __name__ == "__main__":
     unique_amr_genes = amr_genes['name'].unique()
     for amr_gene in unique_amr_genes:
         bed = amr_genes[amr_genes['name'] == amr_gene]
+
         bed.to_csv("temp.bed", header=False, sep='\t', index=False)
         amr_reads = pysam.view(args.bam, "-L", "temp.bed")
 
         for read in amr_reads.strip().split('\n'):
             read_data = read.split('\t')
             labels['Read Name'].append(read_data[0])
-            labels['ARO'].append(amr_gene)
+            labels['ARO'].append(str(amr_gene))
 
     labels = pd.DataFrame(labels)
     labels = labels.drop_duplicates()
