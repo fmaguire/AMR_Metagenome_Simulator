@@ -26,7 +26,7 @@ process INSERT_GENES {
         tuple val(genome_name), path("*_with_insertions.fna"), val(copy_number), path("*_with_insertions.fna.inserts.tsv")
     script:
         """
-        insert_genes_new.py --input_genome $genome --insert_genes $insert_fasta --output ${genome_name}_with_insertions.fna
+        insert_genes.py --input_genome $genome --insert_genes $insert_fasta --output ${genome_name}_with_insertions.fna
         """
 }
 
@@ -78,6 +78,7 @@ process SIMULATE_READS {
         add_contig_names_to_art_bam.py --input_art_bam metagenome_errFree.bam --output_bam unsorted_bam_with_contig_names.bam
 
         samtools sort unsorted_bam_with_contig_names.bam > simulated_metagenome_error_free.bam
+        samtools index simulated_metagenome_error_free.bam
         """
 }
 

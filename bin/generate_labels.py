@@ -23,7 +23,7 @@ if __name__ == "__main__":
         bed = amr_genes[amr_genes['name'] == amr_gene]
 
         bed.to_csv("temp.bed", header=False, sep='\t', index=False)
-        amr_reads = pysam.view(args.bam, "-L", "temp.bed")
+        amr_reads = pysam.view(args.bam, "-ML", "temp.bed")
 
         for read in amr_reads.strip().split('\n'):
             read_data = read.split('\t')
