@@ -1,3 +1,6 @@
 genome_name,fasta_path,copy_number
-e_coli_mg1655,test/data/e_coli_mg1655.fna,3
-k_pneumo_HS11286,test/data/k_pneumo_HS11286.fna,1
+e_coli_mg1655,test/data/e_coli_mg1655.fna,10
+k_pneumo_HS11286,test/data/k_pneumo_HS11286.fna,5
+NC_010610,test/data/NC_010610.fasta,3
+NZ_CP007772,test/data/NZ_CP007772.fasta,2
+NZ_CP008788,test/data/NZ_CP008788.fasta,1

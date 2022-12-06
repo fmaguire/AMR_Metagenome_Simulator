@@ -9,7 +9,7 @@ This takes a spreadsheet of input fasta files (corresponding to genomes/plasmids
 
 1. Splits fasta containing AMR genes to insert. Results in as many chunks as there are genomes each with a random number of AMR genes from the insertion file (or no genes) so that every insertion gene is included 1 time.
 2. Randomly insert these AMR genes from chunks into the input genomes (caveat: could destroy/split an existing AMR gene)
-3. Annotate the input genomes with inserted AMR genes using RGI and convert RGI output to a BED file.
+3. Annotate the input genomes with inserted AMR genes to define start and stop of each AMR gene.
 4. Copy each input genome the specified number of times (from input CSV) to get relative abundance (note: this could be automated/randomised). Update the BED file of AMR gene locations to include all the copies.
 5. Simulate the metagenome from these AMR-inserted/copied input genomes using ART. This stage also fixes the BAM file the simulator generates to include the actual contig names (note: currently hardcoded params for simulation)
 6. Use samtools and the BED files to get all the reads which overlap with an AMR gene in the metagenome. A final table of labels is extracted from this. (note: check overlap requirement - could be total so missing partial AMR reads)

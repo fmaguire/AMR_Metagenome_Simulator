@@ -23,10 +23,10 @@ process INSERT_GENES {
     input:
         tuple val(index), val(genome_name), path(genome), val(copy_number), path(insert_fasta)
     output:
-        tuple val(genome_name), path("*_with_insertions.fna"), val(copy_number), path("*_with_insertions.fna.insertsOnly.fna")
+        tuple val(genome_name), path("*_with_insertions.fna"), val(copy_number), path("*_with_insertions.fna.inserts.tsv")
     script:
         """
-        insert_genes.py --input_genome $genome --insert_genes $insert_fasta --output ${genome_name}_with_insertions.fna
+        insert_genes_new.py --input_genome $genome --insert_genes $insert_fasta --output ${genome_name}_with_insertions.fna
         """
 }
 
@@ -113,12 +113,13 @@ workflow {
     gene_chunks = SPLIT_INSERT_GENES(insert_genes, number_of_genomes)
     gene_chunks = gene_chunks.flatten().map{ [insert_index++, it] }
 
-    input_data = input_data.join( gene_chunks )
+    input_data = input_data.join(gene_chunks )
     input_data_with_insertions = INSERT_GENES(input_data)
 
-    annotated_genomes = ANNOTATE_AMR(input_data_with_insertions)
+    //annotated_genomes = ANNOTATE_AMR(input_data_with_insertions)
 
-    amplified_input = COPY_NUMBER(annotated_genomes)
+    //amplified_input = COPY_NUMBER(annotated_genomes)
+    amplified_input = COPY_NUMBER(input_data_with_insertions)
     
     metagenome_fasta = amplified_input.genome.collectFile(name: "simulated_metagenome.fna")
     metagenome_bed = amplified_input.bed.collectFile(name: "metagenome_unsorted.bed")
